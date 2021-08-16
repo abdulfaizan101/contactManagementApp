@@ -47,12 +47,10 @@ function ViewProfile({ setPage, viewProf, setSetAllContact, allContact }) {
   let num = viewProf && viewProf.name != null ? viewProf.name : 'OOOO';
   let priority = viewProf && viewProf.priority != null ? viewProf.priority : 'OOOO';
 
-  console.log('KKKKKKKKK', allContact);
   const edit = () => {
     setPage(3)
   }
   const delet = () => {
-    console.log('sssssssssssssssss', allContact);
     if (viewProf && viewProf.name != null) {
       for (var i = 0; i < allContact.length; i++) {
         if (allContact[i].id === viewProf.id) {
@@ -78,7 +76,6 @@ function ViewProfile({ setPage, viewProf, setSetAllContact, allContact }) {
 }
 
 function AddProfile({ setPage, setSetAllContact, allContact, viewProf }) {
-  console.log('YYYYYYYYYY', allContact);
   let [contact, setContact] = useState({ name: '', discription: '' });
   const [ButtonDisabled, setButtonDisabled] = useState({ buttonDisabled: true });
   const validator = useRef(new SimpleReactValidator())
@@ -118,7 +115,6 @@ function AddProfile({ setPage, setSetAllContact, allContact, viewProf }) {
     } else {
       setSetAllContact([...allContact, { ...contact, priority: '', id: (allContact.length + 1) }])
     }
-    console.log('ddddddddddddd', allContact);
     setPage(1)
   }
   return (<><div className="my-card">
@@ -154,11 +150,9 @@ function AddProfile({ setPage, setSetAllContact, allContact, viewProf }) {
 
 function ContactList({ page, setPage, allContact, setId }) {
   const setPg = () => {
-    console.log('vvvvvvvvvvvvv', page);
     setPage(3);
   }
   const profileView = (id) => {
-    console.log('ddddddddddddddddd', id);
     setId(id)
     setPage(2);
   }
@@ -216,7 +210,6 @@ function ContactList({ page, setPage, allContact, setId }) {
 }
 
 function EmergencyContacts({ page, setPage, setId, setSetAllContact, allContact, viewProf }) {
-  console.log('zzzzzzzzzzz', allContact);
   const setPg = () => {
     setPage(1)
   }
@@ -228,7 +221,6 @@ function EmergencyContacts({ page, setPage, setId, setSetAllContact, allContact,
 }
 
 function ContactManagement({ page, setPage, setContactId, setSetAllContact, allContact, viewProf }) {
-  console.log('ContactManagement', Math.random(), page, allContact);
   return (<>
     <div className="wrapper">
       <div className="container">
@@ -243,7 +235,6 @@ function ContactManagement({ page, setPage, setContactId, setSetAllContact, allC
 
 
 
-console.log('zaaaaaaaaaaa', Math.random());
 function App() {
   let [page, setPage] = useState(1);
   let [contactId, setContactId] = useState(null);
@@ -268,7 +259,6 @@ function App() {
     }
   }, [page])
 
-  console.log('APP', Math.random(), viewProf, contactId, page, allContact);
   return (<ContactManagement allContact={allContact} viewProf={viewProf} setSetAllContact={setSetAllContact} page={page} setPage={setPage} contactId={contactId} setContactId={setContactId} />
   );
 }

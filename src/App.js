@@ -203,6 +203,10 @@ function ContactList({ page, setPage, allContact, setId }) {
     setPage(2);
   }
 
+  useEffect(() => {
+    document.getElementsByClassName('fixed-row')[0].style.width = document.documentElement.clientWidth + 'px'
+  }, []);
+
 
   function ContactLst() {
     let allList = allContact.sort((a, b) => a.discription.toUpperCase() > b.discription.toUpperCase() && 1 || -1)

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/contactManagementApp/static/css/main.a617e044.chunk.css",
-    "main.js": "/contactManagementApp/static/js/main.170e305c.chunk.js",
-    "main.js.map": "/contactManagementApp/static/js/main.170e305c.chunk.js.map",
+    "main.js": "/contactManagementApp/static/js/main.bbea2f97.chunk.js",
+    "main.js.map": "/contactManagementApp/static/js/main.bbea2f97.chunk.js.map",
     "runtime-main.js": "/contactManagementApp/static/js/runtime-main.4da059e4.js",
     "runtime-main.js.map": "/contactManagementApp/static/js/runtime-main.4da059e4.js.map",
     "static/js/2.4422d00f.chunk.js": "/contactManagementApp/static/js/2.4422d00f.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4da059e4.js",
     "static/js/2.4422d00f.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.170e305c.chunk.js"
+    "static/js/main.bbea2f97.chunk.js"
   ]
 }
